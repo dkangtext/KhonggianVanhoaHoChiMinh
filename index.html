@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--google font-->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    
+    <!--main css-->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Không gian văn hóa Hồ Chí Minh</title>
+
+    <style>
+        
+        /* Khoảng trống giữa hình ảnh */
+        .image-container 
+        {
+            margin-bottom: 20px; /* Khoảng cách dưới */
+        }
+
+        /* Khoảng trống giữa ảnh và hình */
+        .content {
+            padding: 20px; /* Khoảng cách bên trong */
+        }
+
+        .column
+        {
+            padding: 10px;
+            border: 0px solid #ccc;
+        }
+
+        .container
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột có chiều rộng bằng nhau */
+            grid-gap: 10px; /* Khoảng cách giữa các cột */
+        }
+
+        /* Định dạng ảnh */
+        img 
+        {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body,h1,h2,h3,h4,h5 
+        {
+            font-family: "Roboto", sans-serif;
+        }
+
+        body,html 
+        {
+            height: 100%;
+        }
+
+        .bgimg 
+        {
+            background-image: url("https://i.pinimg.com/originals/75/ad/88/75ad88ee6795fd0aaadb0ad2068529bc.png");
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-20 w3-white">
+        <img src="https://i.pinimg.com/originals/cf/01/80/cf0180656837cf12b74b2c7515a9986e.png" alt="Logo" style="width:150px" class="w3-padding-16">
+        <h5>TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG-HCM</h5>
+        <h5>ĐOÀN KHOA MẠNG MÁY TÍNH VÀ TRUYỀN THÔNG</h5>
+    </header>
+
+    <div class="bgimg w3-display-container w3-text-white">
+        <div class="w3-display-middle w3-jumbo">
+            <!-- <p>HÀNH TRÌNH 30 NĂM CỨU NƯỚC CỦA BÁC HỒ</p> -->
+        </div>
+        <div class="w3-display-topright w3-container w3-xlarge">
+            <div style="position: absolute; top: 0; right: 0;"></div>
+                <p><button onclick="openAbout()" class="w3-display-topright w3-button w3-white" style="margin-top: 10px;">GIỚI THIỆU</button></p>
+                <p><button onclick="openInformation()" class="w3-display-topright w3-button w3-white" style="margin-top: 70px;">GIAI ĐOẠN 1: 1911 - 1919</button></p>
+            </div>
+        </div>
+
+    <!-- About Modal -->
+    <div id="about" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-white w3-display-container" style="text-align: justify;">
+                <span onclick="closeAbout()" class="w3-button w3-display-topright w3-large">x</span>
+                <section>
+                    <h2>GIỚI THIỆU:</h2>
+                    <p>Hành trình tìm đường cứu nước của Chủ tịch Hồ Chí Minh có ý nghĩa lịch sử và giá trị giáo dục to lớn đối với thế hệ trẻ Việt Nam. Do đó chuỗi sự kiện truyền thông này giúp mọi người hiểu biết sâu sắc về sự nghiệp cách mạng của Bác, qua đó thực hiện công tác tuyên truyền, tôn vinh Chủ tịch Hồ Chí Minh đồng thời thực hiện học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh.
+                    </p>
+                    <ul>
+                        <center>
+                            <img src="https://i.pinimg.com/originals/f1/b2/ce/f1b2ce0415582e0c6f67c10c0c7b437f.jpg" alt="BacHo" style="fill: 80%;">
+                            <p> </p>
+                            <img src="https://i.pinimg.com/originals/dd/07/f3/dd07f370b0300b4b46bda157791b7150.jpg" alt="BacHo" style="width:80%">
+                            <p> </p>
+                            <img src="https://i.pinimg.com/originals/38/77/1e/38771e4d618821682ab72a1e89770be5.jpg" alt="BacHo" style="fill: 70%">
+                        </center>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Information Modal -->
+    <div id="information" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container w3-white" style="text-align: justify;">
+                <span onclick="closeInformation()" class="w3-button w3-display-topright w3-large">x</span>
+                <section>
+                    <h2>GIAI ĐOẠN 1: 1911 - 1919</h2>
+                    <p>Đầu thế kỷ XX, đất nước ta đặt dưới ách thống trị của thực dân Pháp và phong kiến tay sai, bị đắm chìm trong ách nô lệ, bị xóa tên trên bản đồ thế giới. Đã có hàng trăm cuộc khởi nghĩa diễn ra vì không chịu khuất phục cảnh lầm than nô lệ. Nhưng các con đường cứu nước mang màu sắc khác nhau, dẫn đến kết quả chung là đều thất bại và rơi vào bế tắc.</li>
+                    <p>Lúc bấy giờ, Nguyễn Tất Thành đã có nhận thức sâu sắc về thực tại xã hội và rất đau xót trước nỗi thống khổ của dân tộc, và đã sớm có ý chí đánh đuổi thực dân Pháp, với mong muốn giải phóng đồng bào. Người đã quyết định ra đi tìm đường cứu nước. Người đi sang nước Pháp, sang các nước phương Tây để tìm hiểu vì sao họ giàu mạnh, hiểu những ẩn giấu sau những từ “tự do - bình đẳng - bác ái” mà thực dân Pháp rêu rao ở các nước thuộc địa.</p>
+                    <ul>
+                        <center>
+                            <img src="https://i.pinimg.com/originals/01/38/eb/0138eb06eb3f618d54efb28792b53d63.png" alt = "Tudo-Binhdang-Bacai" style="width: 90%;">
+                        </center>
+                    </ul>
+
+                    <div class="container">
+                        <div class="column">
+                            <p>Vào ngày 05/06/1911, trên con tàu Đô đốc La-tút-sơ Tơ-rê-vin, rời khỏi bến cảng Nhà Rồng (Sài Gòn) với tên gọi Văn Ba, Người xuống làm thuê cho một hãng tàu buôn của Pháp để bắt đầu thực hiện quyết tâm và khát vọng cứu nước, cứu dân của mình. Trong suốt quá trình di chuyển, con tàu Đô đốc La-tút-sơ Tơ-rê-vin dừng chân ở cảng Mác-Xây vào ngày 06/07/1911. Trong thời gian chờ tàu dỡ hàng, chàng thanh niên yêu nước Nguyễn Tất Thành tranh thủ thời gian của mình để tìm hiểu về đời sống nhân dân Pháp.</p>
+                        </div>
+                        <div class="column">
+                            <ul>
+                                <center>
+                                    <img src="https://i.pinimg.com/originals/dc/77/67/dc77679c269df1aa5048c797760a10c0.jpg" alt = "TauDoDocLatusoTorevin" style="width: 150%;">
+                                </center>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Đến năm 1912, Người chuyển qua làm thuê cho một chiếc tàu của hãng Sácgiơ Rêuyni (Pháp). Tại đây, Người có điều kiện vừa làm việc, vừa nghiên cứu học hỏi thêm từ thực tế. Sau đó, Nguyễn Tất Thành theo con tàu tiếp tục đi Mác-ti-ních (Martinique) (Trung Mỹ), Urugoay và Argentina (Nam Mỹ) và dừng lại ở nước Mỹ vào cuối năm 1912.</p>
+                    <p>Giữa năm 1913, Nguyễn Tất Thành theo tàu trở lại Lơ Havơrơ, sau đó sang Anh. Ở Anh, Người nhận cào tuyết cho một trường học, rồi làm thợ đốt lò, làm phụ bếp,... Công việc hết sức nặng nhọc nhưng sau mỗi ngày Người đều tranh thủ thời gian học Tiếng Anh và tiếp tục nghiên cứu về lịch sử của nước Mỹ, nước Anh,.. Nhờ vậy, Người đã có kiến thức sâu sắc về lịch sử phương Tây và những giá trị của nền văn minh phương Tây như tự do, dân chủ, bình đẳng, bác ái,...</p>
+                    <p>Cuối năm 1917, Nguyễn Tất Thành từ Anh trở lại Pháp để có điều kiện trực tiếp hoạt động trong phong trào Việt kiều và phong trào công nhân Pháp, lúc đầu Nguyễn Tất Thành ở phố Charonne trong một thời gian ngắn; từ ngày 7 đến 11-6-1919 ở nhà số 10, phố Stockholm; ngày 12-6-1919, chuyển đến ở nhà số 56 phố Monsieur le Prince; tháng 7-1919, ở nhà số 6, phố Villa des Gobelins, quận 13; ngày 14-7-1921, chuyển đến ở nhà số 12, phố Buyô. Trong tháng 7-1921, Nguyễn Tất Thành chuyển đến nhà số 9, ngõ Compoint, quận 17, một trong những khu lao động nghèo nhất của Thủ đô nước Pháp. Ngày 14-3-1923, Người đến ở nhà số 3, phố Marché des Patriarches.</p>
+                    <ul>
+                        <center>
+                            <img src="https://i.pinimg.com/originals/b4/28/06/b4280628b582fa07d5eead2d37250785.jpg" alt = "Place" style="fill: 100">
+                        </center>
+                    </ul>
+                    <p>Trải qua 6 năm (từ năm 1911 đến năm 1917), Người bôn ba khắp năm châu bốn biển, Người một mặt tiếp cận tìm hiểu thực tế đời sống nhân dân lao động của nhiều quốc gia trên đường Người đi qua ở các châu lục và nghiên cứu học hỏi nên đã có hiểu biết về bản chất chung và màu sắc riêng của mỗi nước đế quốc cũng như trình độ phát triển kinh tế - văn hóa - xã hội khác nhau giữa các nước thuộc địa.</p>
+                    <div class="container">
+                        <div class="column">
+                            <ul>
+                                <center>
+                                    <img src="https://i.pinimg.com/originals/05/85/2c/05852cadc21a05b5054c0511d69987d7.jpg" alt = "Photo" style="fill: 1000">
+                                </center>
+                            </ul>
+                        </div>
+
+                        <div class="column">
+                            <p>Vào đầu năm 1919, Nguyễn Tất Thành tham gia Đảng Xã hội Pháp. Chiến tranh thế giới thứ nhất kết thúc, ngày 18/06/1919, đại biểu các nước đế quốc tham gia chiến tranh họp Hội nghị ở Véc-xây (18-21/6/1919) để giải quyết các vấn đề của chiến tranh. Khi đó, cũng như nhiều người, nhiều dân tộc “từng bị mê hoặc bởi những tuyên bố rộng rãi về quyền tự quyết của các dân tộc” của Tổng thống Hoa Kỳ, thay mặt Hội những người yêu nước Việt Nam tại Pháp, Nguyễn Tất Thành cùng Phan Châu Trinh, Phan Văn Trường thảo bản Yêu sách của nhân dân An Nam (bản Yêu sách tám điểm) gửi tới Hội nghị Véc xây.</p>
+                        </div>
+                    </div>
+                    <p>Bản Yêu sách tám điểm, trong có điểm nổi bật là “đòi Chính phủ các nước họp Hội nghị phải thừa nhận các quyền tự do, dân chủ và quyền bình đẳng của dân tộc Việt Nam”. Dưới bản Yêu sách tám điểm ký tên Nguyễn Ái Quốc, tuy không được chấp nhận nhưng Bản yêu sách của Người được xem là điểm khởi đầu của một hành trình đấu tranh cách mạng và điểm khởi đầu đó đã gây chấn động nước Pháp và thế giới. Sau đó, Nguyễn Ái Quốc đã chuyển thể bản Yêu sách tám điểm qua thể thơ lục bát và song thất lục bát với tên gọi Việt Nam yêu cầu ca.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open About Modal
+        function openAbout() {
+            document.getElementById('about').style.display = 'block';
+        }
+
+        // Function to close About Modal
+        function closeAbout() {
+            document.getElementById('about').style.display = 'none';
+        }
+
+        // Function to open Information Modal
+        function openInformation() {
+            document.getElementById('information').style.display = 'block';
+        }
+
+        // Function to close Information Modal
+        function closeInformation() {
+            document.getElementById('information').style.display = 'none';
+        }
+    </script>
+
+     <!-- Footer -->
+     <footer class="w3-container w3-padding-20 w3-white" style="padding:32px">
+        <h2>THÔNG TIN LIÊN HỆ:</h2>
+        <h5> 📍 Địa chỉ: Đường Hàn Thuyên, khu phố 6 P, Thủ Đức, Thành phố Hồ Chí Minh</h5>
+        <h5> ✈️ Facebook: <a href="https://www.facebook.com/uit.nc">Mạng máy tính và Truyền thông</a></h5>
+        <h5> ✉️ Email: <a href="mailto:doanthanhnien@suctremmt.com">doanthanhnien@suctremmt.com</a></h5>
+    </footer>
+
+</body>
+
+</html>
