@@ -13,9 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     
     <!--main css-->
     <link rel="stylesheet" href="./css/main.css">
@@ -25,6 +24,18 @@
     <title>Không gian văn hóa Hồ Chí Minh</title>
 
     <style>
+        .bungee-spice-regular 
+        {
+            font-family: "Bungee Spice", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .same-line 
+        {
+            display: inline;
+        }   
+
         .alfa-slab-one-regular 
         {
             font-family: "Alfa Slab One", serif;
@@ -32,7 +43,13 @@
             font-style: normal;
         }
 
-        h1, h2, h3, h4
+        h1
+        {
+            font-family: "Alfa Slab One";
+            font-size: 10vh;
+        } 
+        
+        h2, h3, h4
         {
             font-family: "Alfa Slab One";
         }
@@ -100,39 +117,65 @@
             background-image: url("https://i.pinimg.com/originals/b5/41/5d/b5415d5f24defed635ca5d92ca85ce65.jpg");
             background-repeat: repeat;
         }
-        
+    
+        /* CSS cho màn hình lớn (laptop) */
+        @media only screen and (min-width: 1024px) {
+            .responsive-text {
+                font-size: 48px; /* Kích thước chữ cho màn hình lớn */
+            }
+        }
+
+        /* CSS cho màn hình trung bình (tablet) */
+        @media only screen and (max-width: 1023px) and (min-width: 768px) {
+            .responsive-text {
+                font-size: 35px; /* Kích thước chữ cho màn hình trung bình */
+            }
+        }
+
+        /* CSS cho màn hình nhỏ (điện thoại di động) */
+        @media only screen and (max-width: 767px) {
+            .responsive-text {
+                font-size: 20px; /* Kích thước chữ cho màn hình nhỏ */
+            }
+        }
     </style>
 </head>
 
 <body>
 
      <!-- Header -->
-    <header class="w3-container w3-center w3-padding-15 w3-white">
-        <img src="https://i.pinimg.com/originals/cf/01/80/cf0180656837cf12b74b2c7515a9986e.png" alt="logo" style="width:150px" class="w3-padding-14">
-        <h5>TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG-HCM</h5>
-        <h5>ĐOÀN KHOA MẠNG MÁY TÍNH VÀ TRUYỀN THÔNG</h5>
-        <h1 class="w3-xxxlarge"><b>HÀNH TRÌNH 30 NĂM CỨU NƯỚC CỦA BÁC</b></h1>
+    <header class="w3-container w3-center w3-padding-15 w3-white"> 
+            <img src="https://i.pinimg.com/originals/cf/01/80/cf0180656837cf12b74b2c7515a9986e.png" alt="logo" style="width:150px" class="w3-padding-14">
+            <h5>TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN - ĐHQG-HCM</h5>
+            <h5>ĐOÀN KHOA MẠNG MÁY TÍNH VÀ TRUYỀN THÔNG</h5>  
+            <h1 class="responsive-text">HÀNH TRÌNH 30 NĂM CỨU NƯỚC CỦA BÁC</h1>
     </header>
 
     <div class="container">
         <section id="home">
             <div class="w3-modal-content w3-animate-zoom">
                 <div class="w3-container w3-white w3-display-container" style="text-align: justify;">
-            
                     <h2>GIỚI THIỆU:</h2>
-                        <p>Chủ tịch Hồ Chí Minh (tên lúc nhỏ là Nguyễn Sinh Cung, tên khi đi học là Nguyễn Tất Thành, trong nhiều năm hoạt động cách mạng trước đây lấy tên là Nguyễn Ái Quốc), sinh ngày 19-5-1890 ở làng Kim Liên, xã Nam Liên (nay là xã Kim Liên), huyện Nam Đàn, tỉnh Nghệ An và mất ngày 2-9-1969 tại Hà Nội.</p>
+                        <p><h5 class="same-line">Chủ tịch Hồ Chí Minh </h5>(tên lúc nhỏ là Nguyễn Sinh Cung, tên khi đi học là Nguyễn Tất Thành, trong nhiều năm hoạt động cách mạng trước đây lấy tên là Nguyễn Ái Quốc), sinh ngày 19-5-1890 ở làng Kim Liên, xã Nam Liên (nay là xã Kim Liên), huyện Nam Đàn, tỉnh Nghệ An và mất ngày 2-9-1969 tại Hà Nội.</p>
                         <p>Người sinh ra trong một gia đình: Bố là một nhà nho yêu nước, nguồn gốc nông dân; mẹ là nông dân; chị và anh đều tham gia chống Pháp và bị tù đày.</p>        
                             <ul>
                                 <center>
-                                    <img src="https://i.pinimg.com/originals/f1/b2/ce/f1b2ce0415582e0c6f67c10c0c7b437f.jpg" alt="BacHo" style="width: 80%;">
+                                    <figure>
+                                        <img src="https://i.pinimg.com/originals/f1/b2/ce/f1b2ce0415582e0c6f67c10c0c7b437f.jpg" alt="BacHo" style="width: 80%;">
+                                        <figcaption>Chủ tịch Hồ Chí Minh. (Ảnh tư liệu)</figcaption>
+                                    </figure>
                                 </center>
                             </ul>
                         <p>Hành trình tìm đường cứu nước của Chủ tịch Hồ Chí Minh có ý nghĩa lịch sử và giá trị giáo dục to lớn đối với thế hệ trẻ Việt Nam. Do đó chuỗi sự kiện truyền thông này giúp mọi người hiểu biết sâu sắc về sự nghiệp cách mạng của Bác, qua đó thực hiện công tác tuyên truyền, tôn vinh Chủ tịch Hồ Chí Minh đồng thời thực hiện học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh.</p>
                             <ul>
                             <center>
-                                <img src="https://i.pinimg.com/originals/dd/07/f3/dd07f370b0300b4b46bda157791b7150.jpg" alt="BacHo" style="width:85%">
-                                <p> </p>
-                                <img src="https://i.pinimg.com/originals/38/77/1e/38771e4d618821682ab72a1e89770be5.jpg" alt="BacHo" style="width:80%">
+                                <figure>
+                                    <img src="https://i.pinimg.com/originals/dd/07/f3/dd07f370b0300b4b46bda157791b7150.jpg" alt="BacHo" style="width:85%">
+                                    <figcaption>Chủ tịch Hồ Chí Minh. (Ảnh tư liệu)</figcaption>
+                                    <p> </p>
+                                    <img src="https://i.pinimg.com/originals/38/77/1e/38771e4d618821682ab72a1e89770be5.jpg" alt="BacHo" style="width:80%">
+                                    <figcaption>Chủ tịch Hồ Chí Minh đọc tuyên ngôn Độc lập. (Ảnh tư liệu)</figcaption>
+                                </figure>
                             </center>
                         </ul>
                 </div>
@@ -148,7 +191,10 @@
                             <p>Lúc bấy giờ, Nguyễn Tất Thành đã có nhận thức sâu sắc về thực tại xã hội và rất đau xót trước nỗi thống khổ của dân tộc, và đã sớm có ý chí đánh đuổi thực dân Pháp, với mong muốn giải phóng đồng bào. Người đã quyết định ra đi tìm đường cứu nước. Người đi sang nước Pháp, sang các nước phương Tây để tìm hiểu vì sao họ giàu mạnh, hiểu những ẩn giấu sau những từ “tự do - bình đẳng - bác ái” mà thực dân Pháp rêu rao ở các nước thuộc địa.</p>
                             <ul>
                                 <center>
-                                    <img src="https://i.pinimg.com/originals/01/38/eb/0138eb06eb3f618d54efb28792b53d63.png" alt = "Tudo-Binhdang-Bacai" style="width: 90%;">
+                                    <figure>
+                                        <img src="https://i.pinimg.com/originals/01/38/eb/0138eb06eb3f618d54efb28792b53d63.png" alt = "Tudo-Binhdang-Bacai" style="width: 90%;">
+                                        <figcaption>Tự do - Bình đẳng - Bác ái.</figcaption>
+                                    </figure>
                                 </center>
                             </ul>
         
@@ -159,7 +205,10 @@
                                 <div class="column">
                                     <ul>
                                         <center>
-                                            <img src="https://i.pinimg.com/originals/dc/77/67/dc77679c269df1aa5048c797760a10c0.jpg" alt = "TauDoDocLatusoTorevin" style="width: 90%;">
+                                            <figure>
+                                                <img src="https://i.pinimg.com/originals/dc/77/67/dc77679c269df1aa5048c797760a10c0.jpg" alt = "TauDoDocLatusoTorevin" style="width: 90%;">
+                                                <figcaption>Ngày 5/6/1911, trên con tàu Đô đốc Latusơ Tơrêvin. Người thanh niên yêu nước Nguyễn Tất Thành lấy tên mới là Văn Ba, bắt đầu đi tìm đường cứu nước.</figcaption>
+                                            </figure>
                                         </center>
                                     </ul>
                                 </div>
@@ -170,7 +219,10 @@
                             <p>Cuối năm 1917, Nguyễn Tất Thành từ Anh trở lại Pháp để có điều kiện trực tiếp hoạt động trong phong trào Việt kiều và phong trào công nhân Pháp, lúc đầu Nguyễn Tất Thành ở phố Charonne trong một thời gian ngắn; từ ngày 7 đến 11-6-1919 ở nhà số 10, phố Stockholm; ngày 12-6-1919, chuyển đến ở nhà số 56 phố Monsieur le Prince; tháng 7-1919, ở nhà số 6, phố Villa des Gobelins, quận 13; ngày 14-7-1921, chuyển đến ở nhà số 12, phố Buyô. Trong tháng 7-1921, Nguyễn Tất Thành chuyển đến nhà số 9, ngõ Compoint, quận 17, một trong những khu lao động nghèo nhất của Thủ đô nước Pháp. Ngày 14-3-1923, Người đến ở nhà số 3, phố Marché des Patriarches.</p>
                             <ul>
                                 <center>
-                                    <img src="https://i.pinimg.com/originals/b4/28/06/b4280628b582fa07d5eead2d37250785.jpg" alt = "Place" style="width: 100%">
+                                    <figure>
+                                        <img src="https://i.pinimg.com/originals/b4/28/06/b4280628b582fa07d5eead2d37250785.jpg" alt = "Place" style="width: 100%">
+                                        <figcaption>Ngôi nhà số 9, ngõ Compoint, nơi ở của Nguyễn Ái Quốc tại Paris trong thời gian hoạt động ở Pháp. (Ảnh: Tư liệu/TTXVN phát)</figcaption>
+                                    </figure>
                                 </center>
                             </ul>
                             <p>Trải qua 6 năm (từ năm 1911 đến năm 1917), Người bôn ba khắp năm châu bốn biển, Người một mặt tiếp cận tìm hiểu thực tế đời sống nhân dân lao động của nhiều quốc gia trên đường Người đi qua ở các châu lục và nghiên cứu học hỏi nên đã có hiểu biết về bản chất chung và màu sắc riêng của mỗi nước đế quốc cũng như trình độ phát triển kinh tế - văn hóa - xã hội khác nhau giữa các nước thuộc địa.</p>
@@ -178,7 +230,10 @@
                                 <div class="column">
                                     <ul>
                                         <center>
-                                            <img src="https://i.pinimg.com/originals/05/85/2c/05852cadc21a05b5054c0511d69987d7.jpg" alt = "Photo" style="width: 100%">
+                                            <figure>
+                                                <img src="https://i.pinimg.com/originals/05/85/2c/05852cadc21a05b5054c0511d69987d7.jpg" alt = "Photo" style="width: 100%">
+                                                <figcaption>Bản Yêu sách của nhân dân An Nam gửi tới Hội nghị Vecxay-bản tiếng Pháp. (Ảnh tư liệu Bảo tàng LSQG)</figcaption>
+                                            </figure>
                                         </center>
                                     </ul>
                                 </div>
